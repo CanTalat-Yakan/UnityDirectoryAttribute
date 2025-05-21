@@ -1,0 +1,16 @@
+{
+    "name": "UnityEssentials.DirectoryAttribute.Editor",
+    "rootNamespace": "UnityEssentials",
+    "references": [
+        "GUID:9ea47e0d432c6a940aa1de5178dab2a7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
