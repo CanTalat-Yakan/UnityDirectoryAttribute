@@ -27,7 +27,10 @@ namespace UnityEssentials
 
             // Draw the Browse button to the right of the value area, filling the remaining width
             var buttonPosition = new Rect(position.x + labelPosition.width, position.y, valueAreaWidth, rowHeight);
-            if (GUI.Button(buttonPosition, string.IsNullOrEmpty(property.stringValue) ? "Select Directory ..." : "./" + property.stringValue))
+
+            var buttonClicked = GUI.Button(buttonPosition, string.IsNullOrEmpty(property.stringValue) ? "Select Directory ..." : "./" + property.stringValue);
+            var keyboardClicked = InspectorFocusedHelper.ProcessKeyboardClick(buttonPosition);
+            if (buttonClicked || keyboardClicked)
             {
                 // Open the folder selection dialog
                 string selectedPath = EditorUtility.OpenFolderPanel("Select Directory", "Assets", "");
