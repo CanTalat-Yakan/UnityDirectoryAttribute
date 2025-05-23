@@ -4,9 +4,26 @@ using UnityEngine;
 
 namespace UnityEssentials
 {
+    /// <summary>
+    /// Provides a custom property drawer for fields marked with the <see cref="DirectoryAttribute"/>.
+    /// </summary>
+    /// <remarks>This drawer is designed to work with string fields in Unity's Inspector. It displays a button
+    /// that allows users to select a directory using a folder selection dialog. The selected directory path is stored
+    /// as a relative path starting from the "Assets" folder.</remarks>
     [CustomPropertyDrawer(typeof(DirectoryAttribute))]
     public class DirectoryDrawer : PropertyDrawer
     {
+        /// <summary>
+        /// Renders a custom GUI for a string property that represents a directory path, allowing the user to select a
+        /// directory via a folder selection dialog.
+        /// </summary>
+        /// <remarks>This method displays a button labeled "Select Directory ..." or the current directory
+        /// path.  When the button is clicked, a folder selection dialog is shown, allowing the user to choose a
+        /// directory.  If a valid directory is selected, the property's value is updated with the relative path to the
+        /// "Assets" folder.</remarks>
+        /// <param name="position">The rectangle on the screen to use for the property GUI.</param>
+        /// <param name="property">The serialized property being drawn. Must be of type <see cref="SerializedPropertyType.String"/>.</param>
+        /// <param name="label">The label to display next to the property field.</param>
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (property.propertyType != SerializedPropertyType.String)
