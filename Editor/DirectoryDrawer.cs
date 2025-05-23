@@ -21,9 +21,6 @@ namespace UnityEssentials
         /// path.  When the button is clicked, a folder selection dialog is shown, allowing the user to choose a
         /// directory.  If a valid directory is selected, the property's value is updated with the relative path to the
         /// "Assets" folder.</remarks>
-        /// <param name="position">The rectangle on the screen to use for the property GUI.</param>
-        /// <param name="property">The serialized property being drawn. Must be of type <see cref="SerializedPropertyType.String"/>.</param>
-        /// <param name="label">The label to display next to the property field.</param>
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (property.propertyType != SerializedPropertyType.String)
