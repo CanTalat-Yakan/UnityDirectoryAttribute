@@ -2,8 +2,8 @@
     "name": "UnityEssentials.DirectoryAttribute.Editor",
     "rootNamespace": "UnityEssentials",
     "references": [
-        "GUID:9ea47e0d432c6a940aa1de5178dab2a7",
-        "GUID:9fb86f0caf7d8a8488cd8aeb21105895"
+        "GUID:9fb86f0caf7d8a8488cd8aeb21105895",
+        "GUID:9ea47e0d432c6a940aa1de5178dab2a7"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
