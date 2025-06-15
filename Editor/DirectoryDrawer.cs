@@ -30,7 +30,7 @@ namespace UnityEssentials
             }
 
             // Set the height of the row
-            var rowHeight = EditorGUIUtility.singleLineHeight;
+            float rowHeight = EditorGUIUtility.singleLineHeight;
 
             // Draw the label first (label width is the default indent width)
             var labelPosition = new Rect(position.x, position.y, EditorGUIUtility.labelWidth, rowHeight);
@@ -42,8 +42,8 @@ namespace UnityEssentials
             // Draw the Browse button to the right of the value area, filling the remaining width
             var buttonPosition = new Rect(position.x + labelPosition.width, position.y, valueAreaWidth, rowHeight);
 
-            var buttonClicked = GUI.Button(buttonPosition, string.IsNullOrEmpty(property.stringValue) ? "Select Directory ..." : "./" + property.stringValue);
-            var keyboardClicked = InspectorFocusHelper.ProcessKeyboardClick(buttonPosition);
+            bool buttonClicked = GUI.Button(buttonPosition, string.IsNullOrEmpty(property.stringValue) ? "Select Directory ..." : "./" + property.stringValue);
+            bool keyboardClicked = InspectorFocusHelper.ProcessKeyboardClick(buttonPosition);
             if (buttonClicked || keyboardClicked)
             {
                 // Open the folder selection dialog
