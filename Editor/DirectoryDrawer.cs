@@ -43,7 +43,7 @@ namespace UnityEssentials
             var buttonPosition = new Rect(position.x + labelPosition.width, position.y, valueAreaWidth, rowHeight);
 
             var buttonClicked = GUI.Button(buttonPosition, string.IsNullOrEmpty(property.stringValue) ? "Select Directory ..." : "./" + property.stringValue);
-            var keyboardClicked = InspectorFocusedHelper.ProcessKeyboardClick(buttonPosition);
+            var keyboardClicked = InspectorFocusHelper.ProcessKeyboardClick(buttonPosition);
             if (buttonClicked || keyboardClicked)
             {
                 // Open the folder selection dialog
